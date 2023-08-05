@@ -1,0 +1,2 @@
+The sign-up-form.png image in this folder is provided as a guide as to what the finished page produced in this project should look like.
+We are allowed to change the background image and the logo if we wish but the other elements should match as close as possible.
