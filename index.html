@@ -1,11 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign up form</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Sign-up Form</title>
+  </head>
+  <body>
+    <main>
+      <!-- logo and background -->
+      <section class="section section--left">
+        <div class="logo-container">
+          <img
+              class="logo-image"
+              src="images/odin-lined.png"
+              alt="Odin Project Logo"
+            />
+            <h1 class="logo-name">
+              ODIN
+            </h1>
+        </div>
+        <p class="credit">
+            Photo by <a class="credit-link link" href="https://unsplash.com/@ghog?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Lawrence Kayku</a> on <a class="credit-link link" href="https://unsplash.com/photos/ZVKr8wADhpc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        </p>
+      </section>
+
+      <!-- spiel and sign-up form -->
+      <section class="section section--right">
+        <header class="section-header">
+          <p>
+            This is not a real online service! You know you need something
+            like this in your life to help you realize your deepest dreams.
+          </p>
+          <p>Sign up now to get started.</p>
+          <p>You <em>know</em> you want to.</p>
+        </header>
+        <div class="wrapper">
+          <h1 class="heading">Let's do this!</h1>
+          <form id="signup-form" class="form" action="#">
+            <div class="form-control">
+              <label for="first-name" class="label" >First Name</label>
+              <input type="text" id="first-name" name="first-name" placeholder="Greg" pattern="^[a-zA-Z]+$" required/>
+              <p class="error-message">Please enter a valid first name</p>
+            </div>
+            <div class="form-control">
+              <label for="last-name" class="label" >Last Name</label>
+              <input type="text" id="last-name" name="last-name" placeholder="Fisher" pattern="^[a-zA-Z]+$" required/>
+              <p class="error-message">Please enter a valid last name</p>
+            </div>
+            <div class="form-control">
+              <label for="email" class="label" >Email</label>
+              <input type="email" id="email" name="email" placeholder="jsmith@gunna.com" required/>
+              <p class="error-message">Please enter a valid email</p>
+            </div>
+            <div class="form-control">
+              <label for="telephone" class="label" >Phone Number</label>
+              <input type="tel" id="telephone" name="telephone" placeholder="1234567890 (optional)" pattern="[0-9]+"/>
+              <p class="error-message">Please enter a valid phone number</p>
+            </div>
+            <div class="form-control">
+              <label for="password-1" class="label" >Password</label>
+              <input type="password" id="password-1" name="password-1" placeholder="*********" minlength="9" required/>
+              <p class="error-message">The password must be at least 9 characters long</p>
+            </div>
+            <div class="form-control">
+              <label for="password-2" class="label" >Confirm Password</label>
+              <input type="password" id="password-2" name="password-1" placeholder="*********" minlength="9" required/>
+            </div>
+            
+          </form>
+        </div>
+        <!-- submit button and login prompt -->
+        <div class="bottom">
+          <button class="btn" type="submit" form="signup-form">Create Account</button>
+          <p class="login">
+            Already have an account? <a href="#" class="login-link link">Log in</a>
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
