@@ -9,12 +9,12 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 62.5%;
     box-sizing: border-box;
-    --green1: #567901;
-    --green2: #e6ebaa;
+    --default-green: #5b7e01;
     --black-transp: rgb(11, 12, 15, 0.4);
-    --valid-red: #e60000;
-    --valid-green: #349607;
-    --focus-blue: #5fa8e4;
+    --background-green: #dae283;
+    --input-red: #e60000;
+    --input-green: #3baa08;
+    --focus-blue: #2589da;
   }
   
   *,
@@ -46,7 +46,7 @@
   /* logo and background */
   
   .section--left {
-    background-color: var(--green1);
+    background-color: var(--default-green);
     background-image: url("/images/background.jpg");
     background-size: cover;
     background-position: bottom;
@@ -98,7 +98,7 @@
   /* spiel and sign-up form */
   
   .section--right {
-    background-color: var(--green2);
+    background-color: var(--background-green);
     flex-basis: 60%;
   
     display: flex;
@@ -112,7 +112,6 @@
   
   .section-header > p {
     max-width: 50ch;
-    /* color: black; */
     font-size: 2.4rem;
     font-weight: 600;
     line-height: 1.3;
@@ -175,12 +174,12 @@
   }
   
   .form-control > input:invalid:not(:focus):not(:placeholder-shown) {
-    border-color: var(--valid-red);
+    border-color: var(--input-red);
     box-shadow: inset 0 0 25px rgba(230, 95, 95, 0.5);
   }
   
   .form-control > input:required:valid:not(:placeholder-shown) {
-    border-color: var(--valid-green);
+    border-color: var(--input-green);
     box-shadow: inset 0 0 25px rgba(52, 150, 7, 0.5);
   }
   
@@ -195,7 +194,7 @@
   .label:not([for="telephone"])::after {
     content: "*";
     font-size: 1.8rem;
-    color: var(--valid-red);
+    color: var(--input-red);
   
     position: absolute;
     right: -1.2rem;
@@ -203,7 +202,7 @@
   
   .error-message {
     display: none;
-    color: var(--valid-red);
+    color: var(--input-red);
     font-size: 1.2rem;
     font-weight: 600;
   
@@ -218,7 +217,7 @@
   .btn {
     font-size: 1.8rem;
     font-weight: 600;
-    background-color: var(--green1);
+    background-color: var(--default-green);
     color: white;
     border: none;
     cursor: pointer;
@@ -230,12 +229,13 @@
   }
   
   .login {
-    color: var(--green1);
     font-size: 1.8rem;
   }
   
-  .login-link {
-    font-weight: 600;
+  #login-link {
+    font-weight: 800;
+    color: var(--default-green);
+    padding: 10px;
   }
   
   /* media queries */
